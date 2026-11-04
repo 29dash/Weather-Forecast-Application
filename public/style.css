@@ -1,0 +1,50 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; color: #0f172a;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(160deg, #dbeafe, #eff6ff 50%, #fef9c3);
+}
+header { text-align: center; padding: 28px 16px 8px; }
+header h1 { margin: 0; font-size: 2rem; }
+header p { margin: 4px 0 0; color: #475569; }
+main { max-width: 760px; margin: 0 auto; padding: 16px; }
+footer { text-align: center; padding: 20px; color: #64748b; font-size: .85rem; }
+
+#searchForm { display: flex; gap: 8px; }
+#searchForm input { flex: 1; padding: 12px 14px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: 1rem; }
+button {
+  padding: 10px 14px; border: 0; border-radius: 10px; cursor: pointer;
+  background: #2563eb; color: #fff; font-size: 1rem;
+}
+button:hover { background: #1d4ed8; }
+#locBtn, #unitBtn { background: #fff; color: #0f172a; border: 1px solid #cbd5e1; }
+#locBtn:hover, #unitBtn:hover { background: #f1f5f9; }
+
+.recent { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; }
+.recent button { padding: 4px 10px; font-size: .85rem; background: #e2e8f0; color: #0f172a; }
+#status { min-height: 1.4em; margin: 10px 2px; color: #475569; }
+#status.error { color: #b91c1c; }
+
+.card { background: #fff; border-radius: 16px; padding: 20px; margin-top: 14px; box-shadow: 0 4px 14px rgba(15, 23, 42, .08); }
+.card h2 { margin: 0 0 12px; font-size: 1.05rem; color: #334155; }
+
+.now { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.now .place { font-size: 1.3rem; font-weight: 600; }
+.now .desc { color: #475569; }
+.now .big { font-size: 3.2rem; font-weight: 700; line-height: 1; }
+.now .icon { font-size: 3.4rem; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-top: 16px; }
+.stats div { background: #f1f5f9; border-radius: 12px; padding: 10px; text-align: center; }
+.stats small { display: block; color: #64748b; }
+
+#daily { list-style: none; margin: 0; padding: 0; }
+#daily li { display: grid; grid-template-columns: 110px 36px 1fr auto; align-items: center; gap: 8px; padding: 10px 0; border-bottom: 1px solid #e2e8f0; }
+#daily li:last-child { border-bottom: 0; }
+#daily .rain { color: #2563eb; font-size: .85rem; }
+#daily .temps { font-weight: 600; }
+#daily .temps span { color: #64748b; font-weight: 400; }
+
+@media (max-width: 520px) {
+  #daily li { grid-template-columns: 90px 30px 1fr; }
+  #daily .rain { display: none; }
+}

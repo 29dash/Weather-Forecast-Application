@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkyCast – Weather Forecast</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🌤️ SkyCast</h1>
+    <p>Simple weather forecast for any city</p>
+  </header>
+
+  <main>
+    <form id="searchForm">
+      <input id="cityInput" type="text" placeholder="Search a city, e.g. Bengaluru" minlength="2" required />
+      <button type="submit">Search</button>
+      <button type="button" id="locBtn" title="Use my location">📍</button>
+      <button type="button" id="unitBtn" title="Switch °C / °F">°C</button>
+    </form>
+
+    <div id="recent" class="recent"></div>
+    <p id="status" role="status"></p>
+
+    <section id="current" class="card" hidden></section>
+
+    <section id="hourlyCard" class="card" hidden>
+      <h2>Next 24 hours</h2>
+      <canvas id="hourlyChart" height="110"></canvas>
+    </section>
+
+    <section id="dailyCard" class="card" hidden>
+      <h2>7-day forecast</h2>
+      <ul id="daily"></ul>
+    </section>
+  </main>
+
+  <footer>Data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
